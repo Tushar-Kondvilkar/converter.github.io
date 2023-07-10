@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Link Converter</title>
+    <script>
+        function convertToSRT() {
+            var linkInput = document.getElementById("linkInput");
+            var link = linkInput.value;
+
+            // Check if the link starts with 'www.'
+            if (link.startsWith("www.")) {
+                // Replace 'www.' with 'srt.'
+                var srtLink = link.replace("www.", "srt.");
+            } else {
+                // The link is already in the SRT format
+                var srtLink = link;
+            }
+
+            // Open the SRT link in a new tab
+            window.open(srtLink);
+        }
+    </script>
+</head>
+<body>
+    <h1>Link Converter</h1>
+    <input type="text" id="linkInput" placeholder="Enter a link">
+    <button onclick="convertToSRT()">Convert </button>
+</body>
+</html>
